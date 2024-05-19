@@ -12,6 +12,10 @@ const nextConfig = {
         port: '',
         pathname: '/pbxt/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+      }
     ],
   },
 }

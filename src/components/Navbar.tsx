@@ -9,7 +9,7 @@ export default function Navbar() {
                 <Link href="/" className="text-white text-2xl font-bold">
                     GGReplicater
                     <Image
-                        src=""
+                        src="https://raw.githubusercontent.com/gaureshpai/GGReplicater/main/src/components/logo.png"
                         alt="GGReplicater Logo"
                         width={32}  // Set the width of the image
                         height={32} // Set the height of the image
