@@ -1,0 +1,105 @@
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS variables for color scheme */
+:root {
+    --foreground-color: rgb(0, 0, 0);
+    --background-start-color: #f3f4f6;
+    /* Light gray */
+    --background-end-color: #ffffff;
+    /* White */
+    --primary-color: #4f46e5;
+    /* Purple */
+    --hover-color: #6b63ff;
+    /* Lighter shade of purple */
+    --title-hover-color: #f3f87a;
+    /* Yellowish */
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-color: rgb(255, 255, 255);
+        --background-start-color: #111827;
+        /* Dark gray */
+        --background-end-color: #1f2937;
+        /* Dark blue-gray */
+        --primary-color: #7c3aed;
+        /* Violet */
+        --hover-color: #9561e2;
+        /* Lighter shade of violet */
+        --title-hover-color: #f3f87a;
+        /* Yellowish */
+    }
+}
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, var(--background-start-color), var(--background-end-color));
+    color: var(--foreground-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+/* Navigation and footer styles */
+nav,
+footer {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+nav a,
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover,
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Button styles */
+button {
+    cursor: pointer;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-link {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.button-link:last-child {
+    margin-right: 0;
+}
+
+.button-link:hover {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Main content styles */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.title-link:hover {
+    color: var(--title-hover-color);
+}
