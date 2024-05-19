@@ -21,6 +21,7 @@ export default function Home() {
     });
 
     let prediction = await response.json();
+    
     if (response.status !== 201) {
       setError(prediction.detail);
       return;
