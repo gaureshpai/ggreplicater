@@ -69,7 +69,214 @@ footer a:hover {
 }
 
 /* Button styles */
-button {
+.button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-link {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.button-link:last-child {
+  margin-right: 0;
+}
+
+.button-link:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Main content styles */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.title-link:hover {
+  color: var(--title-hover-color);
+}
+
+/* components.css */
+
+.titleb {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  /* Remove default underline */
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.titleb:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  color: #f3f87a;
+  /* Reduce opacity on hover */
+}
+
+.buttons {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  /* Adjust padding as needed */
+  border-radius: 0.25rem;
+  /* Add some border radius */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for hover effect */
+}
+
+.buttons:hover {
+  background-color: #4f46e5;
+  text-decoration: none;
+  color: #f3f87a;
+  /* Change background color on hover */
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+  /* Adjust the gap between buttons */
+}
+
+/* Footer styles */
+.footer-container {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 0;
+}
+
+.footer-box {
+  text-align: center;
+}
+
+.footer-box p {
+  margin: 0;
+}
+
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, var(--background-start-color), var(--background-end-color));
+  color: var(--foreground-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* Navigation styles */
+nav {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Button styles */
+.button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-link {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.button-link:last-child {
+  margin-right: 0;
+}
+
+.button-link:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Main content styles */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.title-link:hover {
+  color: var(--title-hover-color);
+}
+
+/* Footer styles */
+.footer-container {
+  background-color: #4f46e5;
+  color: white;
+  padding: 1rem 0;
+}
+
+.footer-box {
+  text-align: center;
+}
+
+.footer-box p {
+  margin: 0;
+}
+
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, var(--background-start-color), var(--background-end-color));
+  color: var(--foreground-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* Navigation styles */
+nav {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Button styles */
+.button {
   cursor: pointer;
   padding: 8px 16px;
   border: none;
