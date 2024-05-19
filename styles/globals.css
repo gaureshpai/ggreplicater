@@ -141,10 +141,24 @@ main {
   /* Change background color on hover */
 }
 
+/* Button container styles */
 .button-container {
   display: flex;
+  flex-direction: column;
+  /* Stack items vertically in mobile view */
+  align-items: center;
+  /* Center items horizontally */
   gap: 1rem;
   /* Adjust the gap between buttons */
+}
+
+@media (min-width: 768px) {
+
+  /* Apply styles only for screens larger than or equal to 768px (tablet/desktop) */
+  .button-container {
+    flex-direction: row;
+    /* Display items in a row for desktop view */
+  }
 }
 
 /* Footer styles */
@@ -309,4 +323,149 @@ main {
 
 .title-link:hover {
   color: var(--title-hover-color);
+}
+
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS variables for color scheme */
+:root {
+  --foreground-color: rgb(0, 0, 0);
+  --background-start-color: #f3f4f6;
+  /* Light gray */
+  --background-end-color: #ffffff;
+  /* White */
+  --primary-color: #4f46e5;
+  /* Purple */
+  --hover-color: #6b63ff;
+  /* Lighter shade of purple */
+  --title-hover-color: #f3f87a;
+  /* Yellowish */
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-color: rgb(255, 255, 255);
+    --background-start-color: #111827;
+    /* Dark gray */
+    --background-end-color: #1f2937;
+    /* Dark blue-gray */
+    --primary-color: #7c3aed;
+    /* Violet */
+    --hover-color: #9561e2;
+    /* Lighter shade of violet */
+    --title-hover-color: #f3f87a;
+    /* Yellowish */
+  }
+}
+
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, var(--background-start-color), var(--background-end-color));
+  color: var(--foreground-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* Navigation styles */
+nav {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Button styles */
+.button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-link {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.button-link:last-child {
+  margin-right: 0;
+}
+
+.button-link:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Main content styles */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.title-link:hover {
+  color: var(--title-hover-color);
+}
+
+/* Footer styles */
+.footer-container {
+  background-color: #4f46e5;
+  color: white;
+  padding: 1rem 0;
+}
+
+.footer-box {
+  text-align: center;
+}
+
+.footer-box p {
+  margin: 0;
+}
+
+/* components.css */
+
+/* Button container styles */
+.button-container {
+  display: flex;
+  /* Initially, display buttons in a row */
+  gap: 1rem;
+  /* Adjust the gap between buttons */
+}
+
+@media (max-width: 767px) {
+
+  /* Apply styles only for screens smaller than 768px (mobile) */
+  .button-container {
+    flex-direction: column;
+    /* Change to column layout for mobile view */
+    align-items: center;
+    /* Center items horizontally */
+  }
+
+  .buttons {
+    width: 100%;
+    /* Set buttons to full width */
+  }
 }
