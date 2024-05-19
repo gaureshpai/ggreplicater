@@ -69,7 +69,7 @@ footer a:hover {
 }
 
 /* Button styles */
-button {
+.button {
     cursor: pointer;
     padding: 8px 16px;
     border: none;
@@ -102,4 +102,47 @@ main {
 
 .title-link:hover {
     color: var(--title-hover-color);
+}
+
+/* components.css */
+
+.titleb {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    /* Remove default underline */
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.titleb:hover {
+    opacity: 0.8;
+    text-decoration: none;
+    color: #f3f87a;
+    /* Reduce opacity on hover */
+}
+
+.buttons {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    /* Adjust padding as needed */
+    border-radius: 0.25rem;
+    /* Add some border radius */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.buttons:hover {
+    background-color: #4f46e5;
+    text-decoration: none;
+    color: #f3f87a;
+    /* Change background color on hover */
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    /* Adjust the gap between buttons */
 }
