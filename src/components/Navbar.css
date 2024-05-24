@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-color: rgb(0, 0, 0);
+    --background-start-color: #f3f4f6;
+    --background-end-color: #ffffff;
+    --primary-color: #4f46e5;
+    --hover-color: #6b63ff;
+    --title-hover-color: #f3f87a;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-color: rgb(255, 255, 255);
+        --background-start-color: #111827;
+        --background-end-color: #1f2937;
+        --primary-color: #7c3aed;
+        --hover-color: #9561e2;
+        --title-hover-color: #f3f87a;
+    }
+}
+
+.titleb {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.titleb:hover {
+    opacity: 0.8;
+    text-decoration: none;
+    color: #f3f87a;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.buttons {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.buttons:hover {
+    background-color: #4f46e5;
+    text-decoration: none;
+    color: #f3f87a;
+}
+
+nav{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;    
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .button-container {
+        flex-direction: row;
+    }
+
+    .buttons {
+        width: 100%;
+    }
+}

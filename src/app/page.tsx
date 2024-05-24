@@ -21,7 +21,7 @@ export default function Home() {
     });
 
     let prediction = await response.json();
-    
+
     if (response.status !== 201) {
       setError(prediction.detail);
       return;
@@ -42,12 +42,9 @@ export default function Home() {
 
   const handleDownload = () => {
     if (prediction) {
-      // Select the download link element
       const downloadLink = document.createElement("a");
       downloadLink.href = prediction.output[prediction.output.length - 1];
       downloadLink.download = "generated_image.png";
-
-      // Simulate a click event to initiate download
       downloadLink.click();
     }
   };
