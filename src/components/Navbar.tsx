@@ -9,7 +9,7 @@ export default function Navbar() {
                 <div className="flex items-center">
                     <a href="/" className="titleb">
                         <Image
-                            src="https://raw.githubusercontent.com/gaureshpai/GGReplicater/main/public/logo.png"
+                            src="/logo.png"
                             alt="GGReplicater Logo"
                             width={32}
                             height={32}
