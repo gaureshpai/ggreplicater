@@ -1,11 +1,12 @@
 'use client';
+
 import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
 import { Prediction } from "replicate";
+
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 export default function Home() {
