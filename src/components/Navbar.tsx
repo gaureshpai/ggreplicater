@@ -10,16 +10,16 @@ export default function Navbar() {
                     <Link href="/" className="titleb">
                         <Image
                             src="/logo.png"
-                            alt="GGReplicater Logo"
+                            alt="AIReplicater Logo"
                             width={32}
                             height={32}
                             className="mr-2"
                         />
-                        GGReplicater
+                        AI Replicater
                     </Link>
                 </div>
 
-                <div className="button-container">
+                {/* <div className="button-container">
                     <Link href="https://gauresh.vercel.app" target="_blank" rel="noopener noreferrer" className="buttons">
                         Website
                     </Link>
@@ -29,7 +29,7 @@ export default function Navbar() {
                     <Link href="https://github.com/gaureshpai" target="_blank" rel="noopener noreferrer" className="buttons">
                         GitHub
                     </Link>
-                </div>
+                </div> */}
             </div>
         </nav>
     );

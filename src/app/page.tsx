@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Head>
-        <title className="title-link">The GGReplicater</title>
+        <title className="title-link">The AI Replicater</title>
       </Head>
 
       <Navbar />
